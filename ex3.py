@@ -190,7 +190,7 @@ while continuar_venda == "s":
             break
 
         else:
-            print("Digite uma escolha válida, (s/n): ").strip().lower()
+            print("Digite uma escolha válida, (s/n): ")
 
 #Relatório Final:
 
