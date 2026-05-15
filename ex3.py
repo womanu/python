@@ -88,7 +88,7 @@ while continuar == "s": # o que eu colocar dentro do continuar (s) vai ser verda
 
     while True: #serve para verificar a condição
 
-        continuar = input("Cadastrar outro produto? (s/n): ").lower()
+        continuar = input("Cadastrar outro produto? (s/n): ").strip().lower()
 
         #se dentro de continuar tiver s ou n, ele vai para o outro while
         if continuar == "n" or continuar == "s": # se eu colocar s, ele quebra apenas a repetição, mas sempre volta pro while
@@ -119,7 +119,7 @@ while continuar_venda == "s":
         #aqui ele percorre a lista e mostra todos os produtos toda vez que for comprar
         for produto in produtos:
         
-            print(f"Produto: {produto['nome']} , Preço: {produto['preço']} , Estoque: {produto['estoque']}")
+            print(f"PRODUTO: {produto['nome']} | PREÇO: {produto['preço']} | ESTOQUE: {produto['estoque']}")
 
         nome_produto = input("Qual produto deseja comprar?: ").strip().lower()
 
@@ -158,7 +158,7 @@ while continuar_venda == "s":
 
         while True: #serve para verificar a condição de continuação de compra, se eu for colocar um "talvez" ele pede pra eu escolher direito
 
-            continuar_compra = input("Adicionar mais produtos? (s/n): ").lower()
+            continuar_compra = input("Adicionar mais produtos? (s/n): ").strip().lower()
 
             #se dentro de continuar tiver s ou n, ele vai para o outro while
             if continuar_compra == "n" or continuar_compra == "s":
@@ -182,7 +182,7 @@ while continuar_venda == "s":
 
     while True: #serve para verificar a condição de continuar venda, tratar erro
 
-        continuar_venda = input("Realizar outra venda? (s/n): ").lower()
+        continuar_venda = input("Realizar outra venda? (s/n): ").strip().lower()
 
         #se dentro de continuar tiver s ou n, ele vai para o outro while
         if continuar_venda == "n" or continuar_venda == "s":
@@ -190,7 +190,7 @@ while continuar_venda == "s":
             break
 
         else:
-            print("Digite uma escolha válida: ")
+            print("Digite uma escolha válida, (s/n): ").strip().lower()
 
 #Relatório Final:
 
